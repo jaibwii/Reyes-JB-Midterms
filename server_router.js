@@ -17,7 +17,12 @@ app.get('/ab*cd', function (req,res) {
     res.send('Pattern Match Page');
 })
 
-var server = app.listen(4000, function (){
+app.get('/my_prof', function (req,res) {
+    console.log("Got a GET request for /my_prof");
+    res.send('Reyes John Benedict');
+})
+
+var server = app.listen(4001, function (){
     var host = server.address().address
     var port = server.address().port
 
